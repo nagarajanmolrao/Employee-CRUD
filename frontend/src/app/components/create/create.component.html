@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <div class="card bg-info text-white">
+      <h2 class="card-header">Create Employee</h2>
+      <div class="card-body">
+        <div *ngIf="successMessage" class="alert alert-success" role="alert">
+          {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        <div>
+          <form [formGroup]="createForm" (ngSubmit)="createEmployee()">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" formControlName="firstName">
+              <div class="text-danger">{{ getFirstNameErrorMessage() }}</div>
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" formControlName="lastName">
+              <div class="text-danger">{{ getLastNameErrorMessage() }}</div>
+            </div>
+            <div class="mb-3">
+              <label for="emailId" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="emailId" formControlName="emailId">
+              <div class="text-danger">{{ getEmailErrorMessage() }}</div>
+            </div>
+            <!-- Add more fields for other employee details -->
+            <button type="submit" class="btn btn-primary">Create</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

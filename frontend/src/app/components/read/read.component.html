@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2>Employees</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="bg-dark text-white">
+        <tr>
+          <th class="fw-bold py-3">Employee ID</th>
+          <th class="fw-bold py-3">First Name</th>
+          <th class="fw-bold py-3">Last Name</th>
+          <th class="fw-bold py-3">Email Address</th> <!-- New Column -->
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let employee of employees; let i = index">
+          <tr [class]="i % 2 === 0 ? 'table-primary' : 'table-secondary'" class="clickable" (click)="viewEmployeeDetails(employee.id)">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.emailId }}</td> <!-- Display Email Address -->
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

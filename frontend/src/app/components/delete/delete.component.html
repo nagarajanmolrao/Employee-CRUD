@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2>Employees</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th class="fw-bold py-3">Employee ID</th>
+            <th class="fw-bold py-3">First Name</th>
+            <th class="fw-bold py-3">Last Name</th>
+            <th class="fw-bold py-3">Email Address</th>
+            <th class="fw-bold py-3">Actions</th> <!-- New Column for Delete Button -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.emailId }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
