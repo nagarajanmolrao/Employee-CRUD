@@ -1,0 +1,22 @@
+# Backend - Spring Boot
+/backend/target/
+/backend/spring-boot-starter/target/
+/backend/spring-boot-application/target/
+/backend/.idea/
+/backend/*.iml
+/backend/logs/
+/backend/bin/
+/backend/lib/
+/backend/build/
+/backend/classes/
+
+# Frontend - Angular
+/frontend/node_modules/
+/frontend/dist/
+/frontend/e2e/
+/frontend/.vscode/
+/frontend/*.log*
+/frontend/*.js
+/frontend/*.js.map
+/frontend/*.css
+/frontend/*.html
